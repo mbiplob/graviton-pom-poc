@@ -32,10 +32,14 @@ public class RegistrationPage extends BasePage{
     WebElement registerButton;
     @FindBy(xpath="//*[@id='sectionsNav']/div/div[1]/ul[2]/li[1]/a")
     WebElement userNameText;
+    @FindBy(xpath = "//*[@id='sectionsNav']/div/div[1]/ul[2]/li[1]/a/b")
+    WebElement logoutDropDown;
+    @FindBy(xpath = "//*[@id='sectionsNav']/div/div[1]/ul[2]/li[1]/ul/li[2]/a")
+    WebElement logoutBtn;
 
     public void registerAccount() throws InterruptedException {
         clickOnElement(loginBtn);
-        textInput(registerEmailInput, "graviton4@graviton.com");
+        textInput(registerEmailInput, "graviton50@graviton.com");
         textInput(firstNameInput, firstName);
         textInput(lastNameInput, "Technologies");
         textInput(enterPassword, "graviton1");
@@ -44,6 +48,9 @@ public class RegistrationPage extends BasePage{
         Thread.sleep(10000);
         System.out.println("Actual text: " +userNameText.getText());
         Assert.assertTrue(userNameText.getText().toLowerCase().contains(firstName));
+        clickOnElement(logoutDropDown);
+        clickOnElement(logoutBtn);
+
     }
 
 }

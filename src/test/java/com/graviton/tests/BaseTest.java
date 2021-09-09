@@ -1,5 +1,6 @@
 package com.graviton.tests;
 
+import com.graviton.pages.LogInPage;
 import com.graviton.pages.RegistrationPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -13,11 +14,13 @@ public class BaseTest {
 
    //Test Classes
     protected RegistrationPage registrationPage;
+    protected LogInPage logInPage;
 
     @BeforeClass
     public void setup(){
         init();
         registrationPage = new RegistrationPage(driver);
+        logInPage = new LogInPage(driver);
     }
 
     @AfterClass

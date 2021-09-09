@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Rafi's test Suite" verbose="1" >
+    <test name="Rafi's Test" >
+        <classes>
+            <class name="com.graviton.tests.RegistrationPageTest" />
+        </classes>
+    </test>
+    <test name="Rafi's Tests" >
+        <classes>
+            <class name="com.graviton.tests.RegistrationPageTest" />
+        </classes>
+    </test>
+
+</suite>
