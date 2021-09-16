@@ -20,6 +20,10 @@ public class LogInPage extends BasePage{
     WebElement passforLogIn;
     @FindBy(xpath="//*[@id='login']/form/button")
     WebElement loginButtonforLogin;
+    @FindBy(xpath = "(//a[@class='dropdown-toggle'])[1]")
+    WebElement profileLink;
+    @FindBy(xpath = "//a[@href=\"/logout\"]")
+    WebElement logoutButton;
 
 
 
@@ -36,7 +40,13 @@ public class LogInPage extends BasePage{
         textInput(emailforLogIn, userID);
         textInput(passforLogIn, pass);
         clickOnElement(loginButtonforLogin);
-
+        System.out.println("Clicked on Login Button");
+        Thread.sleep(5000);
+        clickOnElement(profileLink);
+        System.out.println("Clicked on profile");
+        Thread.sleep(2000);
+        clickOnElement(logoutButton);
+        System.out.println("Clicked on LogOut Button");
     }
 
 }

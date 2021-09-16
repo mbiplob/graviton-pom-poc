@@ -5,8 +5,14 @@ import com.graviton.pages.RegistrationPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+
+import java.io.IOException;
+
+import static com.graviton.utils.ExcelReader.readExcelData;
 
 public class BaseTest {
    public WebDriver driver;
@@ -32,8 +38,17 @@ public class BaseTest {
 
     public void init(){
         WebDriverManager.chromedriver().setup();
+        //WebDriverManager.firefoxdriver().setup();
         driver = new ChromeDriver();
-        driver.manage().window().fullscreen();
+       // driver = new FirefoxDriver();
         driver.navigate().to(baseURL);
     }
+
+    @DataProvider(name="ida")
+    public Object [][] loginData() throws IOException {
+
+        Object [][] arrayObject = readExcelData();
+        return arrayObject;
+    }
+
 }

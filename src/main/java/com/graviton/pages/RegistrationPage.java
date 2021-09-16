@@ -27,6 +27,7 @@ public class RegistrationPage extends BasePage{
     @FindBy(xpath="(//*[@id='password'])[2]")
     WebElement enterPassword;
     @FindBy(xpath="//*[@id='passwordConfirm']")
+
     WebElement confirmPassword;
     @FindBy(xpath="//*[@id='registrationForm']/button")
     WebElement registerButton;
@@ -34,9 +35,10 @@ public class RegistrationPage extends BasePage{
     WebElement userNameText;
     @FindBy(xpath = "//*[@id='sectionsNav']/div/div[1]/ul[2]/li[1]/a/b")
     WebElement logoutDropDown;
-    @FindBy(xpath = "//*[@id='sectionsNav']/div/div[1]/ul[2]/li[1]/ul/li[2]/a")
+    //@FindBy(xpath = "//*[@id='sectionsNav']/div/div[1]/ul[2]/li[1]/ul/li[2]/a")
+    @FindBy(xpath = "//a[@href='/logout']")
     WebElement logoutBtn;
-
+    //a[@href='/logout']
     public void registerAccount() throws InterruptedException {
         clickOnElement(loginBtn);
         textInput(registerEmailInput, "graviton50@graviton.com");

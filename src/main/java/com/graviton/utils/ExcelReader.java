@@ -10,13 +10,9 @@ import java.io.IOException;
 
 public class ExcelReader {
 
-    public static void main(String[] args) throws IOException {
-        printExcelData(readExcelData());
-    }
-
     public static String [][] readExcelData() throws IOException {
 
-        String filePath = "testData/testData.xlsx";
+        String filePath = "/Users/biplob/Desktop/testData.xlsx";
         FileInputStream stream = new FileInputStream(filePath);
 
         //Loading excel file
