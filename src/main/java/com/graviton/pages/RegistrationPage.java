@@ -41,7 +41,7 @@ public class RegistrationPage extends BasePage{
     //a[@href='/logout']
     public void registerAccount() throws InterruptedException {
         clickOnElement(loginBtn);
-        textInput(registerEmailInput, "graviton50@graviton.com");
+        textInput(registerEmailInput, "graviton301@graviton.com");
         textInput(firstNameInput, firstName);
         textInput(lastNameInput, "Technologies");
         textInput(enterPassword, "graviton1");
