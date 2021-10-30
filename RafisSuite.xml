@@ -6,10 +6,5 @@
             <class name="com.graviton.tests.RegistrationPageTest" />
         </classes>
     </test>
-    <test name="Rafi's Tests" >
-        <classes>
-            <class name="com.graviton.tests.RegistrationPageTest" />
-        </classes>
-    </test>
 
 </suite>
